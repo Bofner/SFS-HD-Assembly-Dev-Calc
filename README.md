@@ -41,6 +41,6 @@ You can even mix and match values so long as you give them the appropriate prefi
 ![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/mix.png)
 
 
-The current version only supports 16-bit numbers. 
+The current version only supports 16-bit numbers, though 8-bit support may be added in the future.
 
 If you have any concerns, please feel free to reach out!
