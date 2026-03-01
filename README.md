@@ -3,6 +3,20 @@ This is a multipurpose base conversion calculator for those developing on older 
 
 ![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/sfs.png)
 
+## Conversion
+
+The SFS-HD supports converting decimal, hexadecimal and binary numbers. Simply input the number you want converted. Decimal numbers are written with no prefix. 
+
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/30.png)
+
+Hexadecimal numbers can be written with a leading $, # or 0x.
+
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/bof.png)
+
+Binary numbers can be written with a leading % or 0b.
+
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/1001.png)
+
 Viable commands for the SFS-HD
 - ADD
 - SUB
@@ -16,8 +30,17 @@ These commands take in 2 parameters, for example if you want to perform 1 + 2 yo
 
 ADD 1, 2
 
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/1and2.png)
+
 And the calculator will display your answer in decimal, hexadecimal and binary. 
 
-Simply inputting a number will also give tht number in all three represented bases. 
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/1and2is3.png)
+
+You can even mix and match values so long as you give them the appropriate prefix when using the commands.
+
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/mix.png)
+
 
 The current version only supports 16-bit numbers. 
+
+If you have any concerns, please feel free to reach out!
