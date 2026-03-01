@@ -1,7 +1,7 @@
 # Steelfinger Studios Hexadecimal to Decimal Calculator
 This is a multipurpose base conversion calculator for those developing on older systems where manipulating binary and hexadecimal numbers is necesary. 
 
-![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/demoScreen.png)
+![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/sfs.png)
 
 Viable commands for the SFS-HD
 - ADD
