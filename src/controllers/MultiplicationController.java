@@ -32,7 +32,7 @@ public class MultiplicationController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)product);
 			}
-			result = new Result(product, Message.SUCCESS);
+			result = new Result(product, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

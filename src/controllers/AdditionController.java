@@ -32,7 +32,7 @@ public class AdditionController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)sum);
 			}
-			result = new Result(sum, Message.SUCCESS);
+			result = new Result(sum, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

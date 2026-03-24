@@ -49,7 +49,7 @@ public class Model {
 	// History
 
 // Current Result
-	private Result currentResult = new Result(0, Message.UNINITIALIZED);
+	private Result currentResult = new Result(0, Message.UNINITIALIZED, calc);
 // Getters
 	// Returns the most current result
 	public Result getCurrentResult() { 
@@ -63,6 +63,8 @@ public class Model {
 		// Update to new result
 		this.currentResult = r;
 	}
+
+
 
 	
 

@@ -32,7 +32,7 @@ public class XorController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)xorResult);
 			}
-			result = new Result(xorResult, Message.SUCCESS);
+			result = new Result(xorResult, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

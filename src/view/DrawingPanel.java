@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 
 import controllers.FontMapperController;
 import model.Model;
-import model.Register;
 import model.Result;
 import model.TextSprite;
 
@@ -27,6 +26,7 @@ public class DrawingPanel extends JPanel {
 		this.calcFont = ui.getcalcFontImage();
 		this.calcScreen = ui.getCalcBcakgroundImage();		
 		this.scale = ui.getScale();
+		this.setFocusTraversalKeysEnabled(false);
 		
 	}
 
@@ -46,6 +46,9 @@ public class DrawingPanel extends JPanel {
 
 		// HEX) Draw the hex font
 		drawStringAsFont(g, resultSprites.getHexResult(), calculatorUI.getHexadecimalLinePositionX(), calculatorUI.getHexadecimalLinePositionY());
+
+		// CalcMode) Draw the CalcMode font
+		drawStringAsFont(g, this.model.getCalculator().getCalcModeString(), calculatorUI.getCalcModeLinePositionX(), calculatorUI.getCalcModeLinePositionY());
 
 		// BIN) Draw the bin font
 		drawStringAsFont(g, resultSprites.getBinResult(), calculatorUI.getBinaryLinePositionX(), calculatorUI.getBinaryLinePositionY());

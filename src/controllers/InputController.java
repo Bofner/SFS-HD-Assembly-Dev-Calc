@@ -1,6 +1,7 @@
 package controllers;
 
 import model.Model;
+import model.Result;
 import view.CalculatorApp;
 
 public class InputController {
@@ -34,6 +35,15 @@ public class InputController {
 	// Called from BACK_SPACE
 	public void backspaceUserInstruction(){
 		model.backspaceCommandLineBuffer(model.getCommandLineBuffer().length() - 1);
+	}
+
+	// Does a tab action on the command line
+	// Called from BACK_SPACE
+	public String tabUserInstruction(){
+		Result prevResult = model.getCurrentResult();
+		int tabbedInput = prevResult.getIntResult();
+		String tabbedCommandLine = String.format("%s",tabbedInput);
+		return tabbedCommandLine;
 	}
 
 }

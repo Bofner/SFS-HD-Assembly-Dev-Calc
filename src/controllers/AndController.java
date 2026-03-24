@@ -32,7 +32,7 @@ public class AndController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)andResult);
 			}
-			result = new Result(andResult, Message.SUCCESS);
+			result = new Result(andResult, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

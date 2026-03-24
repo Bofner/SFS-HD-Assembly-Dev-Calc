@@ -32,7 +32,7 @@ public class SubtractionController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)differece);
 			}
-			result = new Result(differece, Message.SUCCESS);
+			result = new Result(differece, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

@@ -11,6 +11,8 @@ public class Calculator {
         }
 	}
 
+    private CalcMode calcMode = CalcMode.sixteenBit;
+
 // All of the CPU's Registers
 	private final EnumMap<Register, Byte> registers =
             new EnumMap<>(Register.class);
@@ -24,4 +26,27 @@ public class Calculator {
     public void setRegister(Register r, byte value) {
         registers.put(r, value);
     }
+
+// Mode
+	
+	// Returns the current mode
+	public CalcMode getCalcMode() { 
+		return this.calcMode; 
+	}
+    public String getCalcModeString(){
+        if (calcMode == CalcMode.eightBit){
+            return "8-BIT";
+        }
+        else{
+            return "16BIT";
+        }
+        
+    }
+
+// Setters
+	public void setCalcMode(CalcMode newCalcMode) { 
+		this.calcMode = newCalcMode;
+	}
+
+
 }
