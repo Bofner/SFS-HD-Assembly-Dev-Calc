@@ -41,6 +41,16 @@ You can even mix and match values so long as you give them the appropriate prefi
 ![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/mix.png)
 
 
-The current version only supports 16-bit numbers, though 8-bit support may be added in the future.
+~~The current version only supports 16-bit numbers, though 8-bit support may be added in the future.~~
 
 If you have any concerns, please feel free to reach out!
+
+## Updates:
+
+#### Update: 2026/03/25
+- Added support for 16-bit mode and 8-bit mode using the opcode MODE with valid operands being 8 or 16 (ie. "MODE 8" will change from the default 16-bit mode to 8-bit mode).
+
+- Added functionality to the TAB key so that it will immediately write the currently displayed answer to the command line in decimal. Useful for doing continuous operations. Bases can be mixed during operations, so even if you are doing binary or hex exclusive operations, all other Opcodes will work just fine with the decimal representation being used. 
+
+- Updated the project to be self contained in a .jar (Sorry about the previous version, this is my first real Java project). 
+
