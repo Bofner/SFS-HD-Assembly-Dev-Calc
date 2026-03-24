@@ -19,29 +19,29 @@ public class CalculatorUI {
 	public CalculatorUI(Model m, CalculatorApp app) {
 		this.model = m;
 		this.app = app;
-		try{
-			// Create the background
-			calcScreen = ImageIO.read(new File("gfx/SimpleCalc.png"));
-		} catch(Exception e){
+		try {
+			calcScreen = ImageIO.read(getClass().getResource("/gfx/SimpleCalc.png"));
+		} catch (Exception e) {
 			System.out.println("Failed to load background.");
+			System.out.println(e);
 		}
-		try{
-			// Create the font
-			calcFontImage = ImageIO.read(new File("gfx/SfiFont.png"));
-		} catch(Exception e){
-			System.out.println("Failed to load font.");
-		}
-		try{
-			// Set the icon images
-			List<BufferedImage> icons = new ArrayList<>(); 
-			icons.add(ImageIO.read(new File("gfx/icon16.png")));
-			icons.add(ImageIO.read(new File("gfx/icon32.png")));
-			icons.add(ImageIO.read(new File("gfx/icon64.png")));
-			icons.add(ImageIO.read(new File("gfx/icon640.png")));
 
-			
+		try {
+			calcFontImage = ImageIO.read(getClass().getResource("/gfx/SfiFont.png"));
+		} catch (Exception e) {
+			System.out.println("Failed to load font.");
+			System.out.println(e);
+		}
+
+		try {
+			List<BufferedImage> icons = new ArrayList<>();
+			icons.add(ImageIO.read(getClass().getResource("/gfx/icon16.png")));
+			icons.add(ImageIO.read(getClass().getResource("/gfx/icon32.png")));
+			icons.add(ImageIO.read(getClass().getResource("/gfx/icon64.png")));
+			icons.add(ImageIO.read(getClass().getResource("/gfx/icon640.png")));
+
 			app.setIconImages(icons);
-		} catch(Exception e){
+		} catch (Exception e) {
 			System.out.println("Failed to load icon.");
 			System.out.println(e);
 		}
@@ -155,6 +155,25 @@ public class CalculatorUI {
 	public int getHexadecimalNumLength(){
 		return this.hexadecimalNumLength;
 	}
+
+// CalcMode line
+		// Data
+	private final int calcModeLineZeroPositionX = 112 * jankScale;
+	private final int calcModeLineZeroPositionY = 48 * jankScale;
+	private final int calcModeLineLength = 5;
+	// Getters
+	public int getCalcModeLinePositionX(){
+		return this.calcModeLineZeroPositionX;
+	}
+
+	public int getCalcModeLinePositionY(){
+		return this.calcModeLineZeroPositionY;
+	}
+
+	public int getCalcModeLineLength(){
+		return this.calcModeLineLength;
+	}
+
 
 // Binary line
 	// Data

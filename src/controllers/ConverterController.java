@@ -23,7 +23,7 @@ public class ConverterController {
 			result = new Result(Message.OPERAND_ERROR);
 		}
 		else{
-			result = new Result(instruction.getOperand0().getOperandValue(calc), Message.SUCCESS);
+			result = new Result(instruction.getOperand0().getOperandValue(calc), Message.SUCCESS, calc);
 		}
 		
 		return result;

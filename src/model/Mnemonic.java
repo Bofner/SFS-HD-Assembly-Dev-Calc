@@ -11,6 +11,7 @@ import controllers.ConverterController;
 import controllers.EasterController;
 import controllers.InvalidController;
 import controllers.LoadRegisterController;
+import controllers.CalcModeController;
 
 public enum Mnemonic {
 	// Addition
@@ -39,6 +40,9 @@ public enum Mnemonic {
 
 	// Convert numbers to the 3 available bases
 	CONV(1, ConverterController::convertBases),
+
+	// Invalid Operand (Likely not called by user, but they can)
+	MODE(1,CalcModeController::updateCalcMode),
 
 	// Invalid Operand (Likely not called by user, but they can)
 	INVO(0,InvalidController::invalidOperand),

@@ -32,7 +32,7 @@ public class DivisionController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)quotient);
 			}
-			result = new Result(quotient, Message.SUCCESS);
+			result = new Result(quotient, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

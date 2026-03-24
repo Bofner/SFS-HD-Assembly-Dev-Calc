@@ -16,6 +16,7 @@ import model.Model;
 public class CalculatorApp extends JFrame{
 
 	private DrawingPanel contentPane;
+	
 	// Getter
 	public DrawingPanel getContentFrame(){
 		return this.contentPane;
@@ -57,6 +58,12 @@ public class CalculatorApp extends JFrame{
 					new InputController(m, CalculatorApp.this).executeUserInstruction();
 				} else if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE){
 					new InputController(m, CalculatorApp.this).backspaceUserInstruction();
+				}  else if(e.getKeyCode() == KeyEvent.VK_TAB){
+					String tabbedInput = new InputController(m, CalculatorApp.this).tabUserInstruction();
+					for(int i = 0; i < tabbedInput.length(); i++){
+						char c = tabbedInput.charAt(i);
+						new InputController(m, CalculatorApp.this).updateCommandLine(c);
+					}
 				}
 				repaint();
 			}

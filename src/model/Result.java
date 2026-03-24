@@ -16,11 +16,19 @@ public class Result {
 	}
 
 	// A successful result. Used to show the user the result of their input command
-	public Result(int i, Message m){
-		this.intResult = i & 0xFFFF;
-		this.hexResult = String.format("0x%04X",this.intResult);
-		this.decResult = String.format("%5s",this.intResult);
-		this.binResult = String.format("0b%16s",Integer.toBinaryString(this.intResult & 0xFFFF)).replace(' ', '0');
+	public Result(int i, Message m, Calculator calc){
+		if(calc.getCalcMode() == CalcMode.eightBit){
+			this.intResult = i & 0xFF;
+			this.hexResult = String.format("  0x%02X",this.intResult);
+			this.decResult = String.format("  %3s",this.intResult);
+			this.binResult = "        " + String.format("0b%8s",Integer.toBinaryString(this.intResult & 0xFF)).replace(' ', '0');
+		}
+		else if (calc.getCalcMode() == CalcMode.sixteenBit){
+			this.intResult = i & 0xFFFF;
+			this.hexResult = String.format("0x%04X",this.intResult);
+			this.decResult = String.format("%5s",this.intResult);
+			this.binResult = String.format("0b%16s",Integer.toBinaryString(this.intResult & 0xFFFF)).replace(' ', '0');
+		}		
 		this.message = m;
 	}
 

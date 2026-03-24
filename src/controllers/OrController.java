@@ -32,7 +32,7 @@ public class OrController {
 			if((operand0 instanceof RegisterOperand regOp)){
 				calc.setRegister(regOp.getRegisterName(), (byte)orResult);
 			}
-			result = new Result(orResult, Message.SUCCESS);
+			result = new Result(orResult, Message.SUCCESS, calc);
 			// Update our Flags register
 		}
 		return result;

@@ -28,7 +28,7 @@ public class LoadRegisterController {
 		}
 		else{
 			calc.setRegister(regOp.getRegisterName(), (byte) instruction.getOperand1().getOperandValue(calc));
-			result = new Result(instruction.getOperand1().getOperandValue(calc), Message.SUCCESS);
+			result = new Result(instruction.getOperand1().getOperandValue(calc), Message.SUCCESS, calc);
 		}
 		return result;
 	}
