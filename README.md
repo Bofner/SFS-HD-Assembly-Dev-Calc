@@ -1,4 +1,4 @@
-# Steelfinger Studios Hexadecimal to Decimal Calculator
+# Steelfinger Studios Hexadecimal to Decimal Multi-Base Calculator
 This is a multipurpose base conversion calculator for those developing on older systems where manipulating binary and hexadecimal numbers is necesary. 
 
 ![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/sfs.png)
@@ -25,6 +25,7 @@ Viable commands for the SFS-HD
 - AND
 - OR
 - XOR
+- MODE
 
 These commands take in 2 parameters, for example if you want to perform 1 + 2 you would write:
 
