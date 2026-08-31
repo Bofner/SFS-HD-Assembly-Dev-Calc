@@ -6,4 +6,7 @@
 /runtime_image/
 buildCommands.txt
 /sfs-hd/
-
+*.deb
+*.dmg
+*.msi
+/icon.iconset/
