@@ -1,0 +1,7 @@
+/bin/
+/out/
+/dist/
+/export/
+/runtime/
+/runtime_image/
+buildCommands.txt

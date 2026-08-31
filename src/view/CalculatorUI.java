@@ -39,8 +39,14 @@ public class CalculatorUI {
 			icons.add(ImageIO.read(getClass().getResource("/gfx/icon32.png")));
 			icons.add(ImageIO.read(getClass().getResource("/gfx/icon64.png")));
 			icons.add(ImageIO.read(getClass().getResource("/gfx/icon640.png")));
-
 			app.setIconImages(icons);
+
+			if (Taskbar.isTaskbarSupported()) {
+				Taskbar taskbar = Taskbar.getTaskbar();
+				if (taskbar.isSupported(Taskbar.Feature.ICON_IMAGE)) {
+					taskbar.setIconImage(icons.get(icons.size() - 1)); 
+				}
+    		}
 		} catch (Exception e) {
 			System.out.println("Failed to load icon.");
 			System.out.println(e);
