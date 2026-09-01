@@ -1,5 +1,5 @@
 # Steelfinger Studios Hexadecimal to Decimal Multi-Base Calculator
-This is a multipurpose base conversion calculator for those developing on older systems where manipulating binary and hexadecimal numbers is necessary. 
+All of your deepest hexadecimal and binary dreams can now be fulfilled with the SFS-HD Multi-Base Calculator! With 8-bit and 16-bit support, you're ready for all sorts of fun programming in assembly for 8-bit computers and game consoles! Supported by Java, Linux, Windows, and Mac OS!
 
 ![](https://github.com/Bofner/SFS-HD-Assembly-Dev-Calc/blob/main/AssetIdeas/sfs.png)
 
@@ -47,6 +47,9 @@ You can even mix and match values so long as you give them the appropriate prefi
 If you have any concerns, please feel free to reach out!
 
 ## Updates:
+
+#### Update: 2026/09/01
+- Added binaries for Linux, Windows and Mac OS
 
 #### Update: 2026/03/25
 - Added support for 16-bit mode and 8-bit mode using the opcode MODE with valid operands being 8 or 16 (ie. "MODE 8" will change from the default 16-bit mode to 8-bit mode).
