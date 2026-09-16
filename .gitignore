@@ -10,3 +10,4 @@ buildCommands.txt
 *.dmg
 *.msi
 /icon.iconset/
+.DS_Store
